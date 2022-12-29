@@ -1,0 +1,14 @@
+Resources:
+ CreateTests3fillaccessPolicy:
+  Type: 'AWS::IAM::ManagedPolicy'
+  Properties:
+    Description: Policy for creating s3 full access
+    Path: /
+    PolicyDocument:
+      Version: "2012-10-17"
+      Statement:
+        - Effect: Allow
+          Action:
+          - s3:*
+          - s3-object-lambda:*
+          Resource: "*"
